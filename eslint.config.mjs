@@ -8,14 +8,29 @@ export default [
         require: "readonly",
         module: "readonly",
         console: "readonly",
+        process: "readonly",
+        __dirname: "readonly",
       },
+      ecmaVersion: 2021,
       sourceType: "commonjs",
     },
-    env: {
-      node: true,
-      es2021: true,
-      jest: true,
+    linterOptions: {
+      reportUnusedDisableDirectives: true,
     },
-    rules: {},
+    rules: {
+      // tu peux ajouter tes propres règles ici
+    },
+  },
+  {
+    files: ["tests/**"],
+    languageOptions: {
+      globals: {
+        describe: "readonly",
+        it: "readonly",
+        expect: "readonly",
+        beforeEach: "readonly",
+        afterEach: "readonly",
+      },
+    },
   },
 ];
