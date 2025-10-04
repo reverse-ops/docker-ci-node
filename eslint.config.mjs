@@ -3,6 +3,10 @@ import js from "@eslint/js";
 export default [
   js.configs.recommended,
   {
+    ignores: [
+      "node_modules/",
+      "eslint.config.mjs"
+    ],
     languageOptions: {
       globals: {
         require: "readonly",
@@ -18,7 +22,7 @@ export default [
       reportUnusedDisableDirectives: true,
     },
     rules: {
-      // tu peux ajouter tes propres règles ici
+      // ajoute tes règles ici si besoin
     },
   },
   {
